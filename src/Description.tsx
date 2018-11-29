@@ -8,6 +8,9 @@ interface IState {
   count: number
 }
 
+const increaseCount = ({ count }: IState, increaseCountBy: number) =>
+  count + increaseCountBy
+
 class Description extends React.Component<IProps, IState> {
   public static defaultProps: Partial<IProps> = {
     countBy: 1
@@ -19,8 +22,10 @@ class Description extends React.Component<IProps, IState> {
 
   public increase = () => {
     const countBy: number = this.props.countBy!
-    const count = this.state.count + countBy
-    this.setState({ count })
+
+    this.setState({
+      count: increaseCount(this.state, countBy)
+    } as IState)
   }
 
   public render() {

@@ -10,15 +10,15 @@ interface IState {
   inputValue: string
 }
 
-export default class From extends React.Component<IProps, IState> {
-  state = {
+export default class DisplayInput extends React.Component<IProps, IState> {
+  public state: IState = {
     inputValue: ""
   }
 
-  handleChange = (e: React.FormEvent<HTMLInputElement>): void =>
+  public handleChange = (e: React.FormEvent<HTMLInputElement>): void =>
     this.setState({ inputValue: e.currentTarget.value })
 
-  render = () => (
+  public render = () => (
     <>
       <Input
         value={this.state.inputValue}

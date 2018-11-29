@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 import Description from "./Description"
 import Header from "./Header"
-import Form from "./Form"
+import Form from "./DisplayInput"
 import "./App.css"
 
 const formRender = (value: string) => <div>{value}</div>
