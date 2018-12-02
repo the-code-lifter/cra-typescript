@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-import Input from "./Input"
+import Input from './Input'
 
 interface IProps {
   children: (value: string) => void
@@ -12,7 +12,7 @@ interface IState {
 
 export default class DisplayInput extends React.Component<IProps, IState> {
   public state: IState = {
-    inputValue: ""
+    inputValue: '',
   }
 
   public handleChange = (e: React.FormEvent<HTMLInputElement>): void =>
@@ -23,7 +23,7 @@ export default class DisplayInput extends React.Component<IProps, IState> {
       <Input
         value={this.state.inputValue}
         onChange={this.handleChange}
-        name="testInput"
+        name='testInput'
       />
       {this.props.children(this.state.inputValue)}
     </>

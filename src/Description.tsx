@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 interface IProps {
   countBy?: number
@@ -13,18 +13,18 @@ const increaseCount = ({ count }: IState, increaseCountBy: number) =>
 
 class Description extends React.Component<IProps, IState> {
   public static defaultProps: Partial<IProps> = {
-    countBy: 1
+    countBy: 1,
   }
 
   public state: IState = {
-    count: 0
+    count: 0,
   }
 
   public increase = () => {
     const countBy: number = this.props.countBy!
 
     this.setState({
-      count: increaseCount(this.state, countBy)
+      count: increaseCount(this.state, countBy),
     } as IState)
   }
 

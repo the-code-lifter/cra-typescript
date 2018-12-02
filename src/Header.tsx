@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 interface IProps {
   name?: string
@@ -9,7 +9,7 @@ const Header: React.SFC<IProps> = (props: IProps) => (
 )
 
 Header.defaultProps = {
-  name: "world"
+  name: 'world',
 }
 
 export default Header

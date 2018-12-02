@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 interface IProps {
   name: string
@@ -10,6 +10,6 @@ const Input = ({ name, value, onChange }: IProps) => (
   <input onChange={onChange} value={value} name={name} />
 )
 
-Input.displayName = "Input"
+Input.displayName = 'Input'
 
 export default Input
