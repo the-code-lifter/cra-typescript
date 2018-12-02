@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 
 import Description from "./Description"
 import Header from "./Header"
@@ -12,7 +12,7 @@ const App = () => (
     <header className="App-header">
       <Header name="Bob" />
       <Description countBy={3} />
-      <Form render={formRender} />
+      <Form>{formRender}</Form>
     </header>
   </div>
 )

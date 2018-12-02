@@ -3,7 +3,7 @@ import React from "react"
 import Input from "./Input"
 
 interface IProps {
-  render: (value: string) => void
+  children: (value: string) => void
 }
 
 interface IState {
@@ -25,7 +25,7 @@ export default class DisplayInput extends React.Component<IProps, IState> {
         onChange={this.handleChange}
         name="testInput"
       />
-      {this.props.render(this.state.inputValue)}
+      {this.props.children(this.state.inputValue)}
     </>
   )
 }
